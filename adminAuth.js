@@ -26,7 +26,7 @@ const auth = async (req, res, next) => {
     } else {
         res
         .status(401)
-        .json({error : { message: "Not authorized, token not available" }})
+        .json({error : { message: "Not authorized, no active session" }})
     }
 }
 

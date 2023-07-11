@@ -22,17 +22,17 @@ const UserSchema = new Mongoose.Schema({
     surname : {
         type: String,
         unique: false,
-        required: false,
+        required: true,
     },
     department : {
         type: String,
         unique: false,
-        required: false,
+        required: true,
     },
     mobile : {
         type: String,
         unique: false,
-        required: false,
+        required: true,
     },
     email : {
         type: String,
@@ -75,7 +75,7 @@ router.get('/:id', (req, res) => {
         data ? res.status(200).json(data) : res.status(200).json({})
     })
     .catch(err => {
-        res.status(500).json(err)
+        res.status(502).json(err)
     })
 })
 
@@ -97,7 +97,7 @@ router.post('/', async (req, res) => {
             })
         })
         .catch(err => {
-            res.status(500).json(err.message)
+            res.status(500).json(err)
         })
     }
 })

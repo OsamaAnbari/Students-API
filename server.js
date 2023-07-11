@@ -21,9 +21,6 @@ app.use(cookieParser());
 app.use('/students/', require('./users'))
 app.use('/admins/', require('./admins'))
 
-app.get('/home', (req, res) => res.render("home"))
-app.get('/students-list', require('./adminAuth'), (req, res) => res.render("students_list"))
-
 //--------------------------------------------------------------------------------------
 
 app.all('*', (req, res) => {
