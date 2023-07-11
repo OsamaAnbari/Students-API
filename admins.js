@@ -107,8 +107,9 @@ router.post('/login', async (req, res) => {
                     { expiresIn: maxAge }
                 )
                 res.cookie("jwt", token, {
-                    //httpOnly: true,
+                    httpOnly: true,
                     maxAge: maxAge * 1000,
+                    sameSite: None
                 })
                 
                 res.status(200).json({
