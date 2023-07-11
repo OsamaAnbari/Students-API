@@ -9,7 +9,7 @@ connectDB()
 
 app.use(cors({
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
-    origin: ['http://localhost:3000', 'http://127.0.0.1:3000/', 'mylaravel', 'https://osamaanbari.000webhostapp.com/', 'http://osamaanbari.000webhostapp.com/'],
+    origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'mylaravel', 'https://osamaanbari.000webhostapp.com', 'http://osamaanbari.000webhostapp.com'],
     credentials: true,
 }))
 
