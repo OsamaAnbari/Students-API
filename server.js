@@ -9,7 +9,7 @@ connectDB()
 
 app.use(cors({
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
-    origin: ['http://localhost:3000', 'mylaravel'],
+    origin: ['http://localhost:3000', 'mylaravel', 'https://osamaanbari.000webhostapp.com/'],
     credentials: true
 }))
 app.set("view engine", "ejs")
