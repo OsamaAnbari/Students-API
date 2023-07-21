@@ -8,4 +8,6 @@ const connectDB = async () => {
     console.log('Database is connected')
 }
 
-module.exports = {connectDB}
+const jwtSecret = '7fb4895dcd29473f09bd3b9d1499246456dd1eda25daf3f66fd4c5bf990e257418e4d3'
+
+module.exports = {connectDB, jwtSecret}

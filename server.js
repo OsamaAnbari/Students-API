@@ -1,4 +1,4 @@
-const {connectDB} = require('./db.js')
+const {connectDB} = require('./config.js')
 const cookieParser = require("cookie-parser");
 const express = require('express')
 const cors = require('cors')
@@ -18,8 +18,14 @@ app.use(cookieParser());
 
 //--------------------------------------------------------------------------------------
 
+app.use('/login', require('./logs/login.js'))
+app.use('/logout', require('./logs/logout.js'))
+app.use('/password', require('./logs/changepassword.js'))
+
 app.use('/students/', require('./users'))
 app.use('/admins/', require('./admins'))
+app.use('/activities/', require('./activities'))
+app.use('/messages/', require('./messages'))
 
 //--------------------------------------------------------------------------------------
 
